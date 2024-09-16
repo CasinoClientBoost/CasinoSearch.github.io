@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лучшие Результаты В Истории</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="blinking-text">Вот Ваши Лучшие Результаты!</h1>
+        <div id="results"></div>
+        <a href="index.html" class="bad-back">Назад</a>
+    </div>
+
+    <script>
+        const params = new URLSearchParams(window.location.search);
+        const query = params.get('zaproc');
+        const sites = [
+            { name: "Google", url: "other.html?site=google" },
+            { name: "Yandex", url: "other.html?site=yandex" },
+            { name: "Casino Client", url: "https://sites.google.com/view/casinoclient/" },
+            { name: "Casino Kombat", url: "https://sites.google.com/view/casino-kombat/" }, 
+            { name: "Casino Discord Server", url: "https://dsc.gg/CasinoClientBoost" },
+            { name: "Casino Youtube Channel", url: "https://www.youtube.com/@CasinoClient" },
+            { name: "Гугл", url: "other.html?site=google" },
+            { name: "Яндекс", url: "other.html?site=yandex" },
+            { name: "Казино Client", url: "https://sites.google.com/view/casinoclient/" },
+            { name: "Казино Kombat", url: "https://sites.google.com/view/casino-kombat/" }, 
+            { name: "Казино Discord Сервер", url: "https://dsc.gg/CasinoClientBoost" },
+            { name: "Казино Youtube Канал", url: "https://www.youtube.com/@CasinoClient" }
+        ];
+
+        const resultsDiv = document.getElementById("results");
+
+        if (query) {
+            let resultsHTML = `<p>Вы ввели запрос "${query}"</p><ul>`;
+            const filteredSites = sites.filter(site => site.name.toLowerCase().includes(query.toLowerCase()));
+
+            if (filteredSites.length > 0) {
+                filteredSites.forEach(site => {
+                    resultsHTML += `<li><a href="${site.url}" target="_blank" style="font-size: 50px; color: lime; background: black; text-decoration: none;">${site.name}</a></li>`;
+                });
+            } else {
+                resultsHTML += "<li style='color: red;'>Ничего не найдено</li>";
+            }
+
+            resultsHTML += "</ul>";
+            resultsDiv.innerHTML = resultsHTML;
+        } else {
+            resultsDiv.innerHTML = "<p>Вы забыли ввести запрос</p>";
+        }
+    </script>
+</body>
+</html>

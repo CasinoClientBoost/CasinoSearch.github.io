@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Casino Search</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1 id="rotating-text" class="rotating-text"></h1>
+        <form action="search.html" method="GET" class="search-form">
+        </form>
+        <div class="fake-buttons">
+            <button onclick="showAlertAndRedirect()" class="fake-btn">Казино сёрч гавно давай в другое место</button>
+        </div>
+    </div>
+    <script>
+        function showAlertAndRedirect() {
+            alert('ЗАБАНИЛИ В КАЗИНО СЁРЧ 🎰🎰🎰😭😭😭🤣🤣🤣 ПОКАЖИ РУССКОГО ХАКЕРА В ДЕЛЕ! 🇷🇺🇷🇺🇷🇺🇷🇺 ПРИШЕЛ В КАЗИНО СЁРЧ, А ТАМ БАЦ - БАН 😭😭😭 ТАКОЕ ТОЛЬКО С НАМИ СЛУЧАЕТСЯ 🎰🎰🎰😆😆😆 АНГЕЛ ЗАБАНЕННЫХ КАЗИНО СЁРЧА МОЛЧАЛ НАД НАМИ 🎰😭😭😭 СМЕХ И СЛЁЗЫ ВСЕЙ КОМАНДОЙ, НО ТАК УГОРЕЛИ, ЧТО ХОТЬ В ВЫИГРЫШ НЕ ИГРАЙ! 😂😂😂 КАК ЖЕ ТАК, ПОИСК ОТ НАС УШЁЛ 🤯🤯🤯 КАЗИНО СЁРЧ НЕ ПРОЩАЕТ 😱😱😱 СМЕЙТЕСЬ, НЕ СМЕЙТЕСЬ, А МЫ В БАНЕ! 😆😆😆 КТО БЫ ПОДУМАЛ, ЧТО ТАКОЕ МОЖЕТ БЫТЬ 🤣🤣🤣БУДЕМ ЖДАТЬ ЧУДА, НО СЛАВА БАНУ В КАЗИНО СЁРЧ 🎰🙏🙏🙏 НЕ ОТЧАИВАЙТЕСЬ, КАЖДЫЙ БАН - ЭТО ШАНС НА НОВОЕ ВЕЗЕНИЕ! 🎰🎰🎰😆😆😆');
+            window.location.href = 'https://www.youtube.com/shorts/L4Re8kH-_Uk';
+        }
+
+        // Функция для получения параметра из URL
+        function getQueryParam(param) {
+            const urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get(param);
+        }
+
+        // Устанавливаем текст в зависимости от параметра
+        function setTextBasedOnURL() {
+            const site = getQueryParam('site');
+            const rotatingTextElement = document.getElementById('rotating-text');
+
+            switch (site) {
+                case 'google':
+                    rotatingTextElement.textContent = '🚀🔥 ВНИМАНИЕ! 🔥🚀 ГОГЛ - УЖАСНЫЙ ПОИСКОВИК, КОТОРЫЙ НЕ МОЖЕТ СРАВНИТЬСЯ С CASINO SEARCH! 😡💩🤯 ЭТО БЕСПОЛЕЗНЫЙ КУСОК ПОМОЙКИ, КОТОРЫЙ НИКАК НЕ МОЖЕТ ДОТЯНУТЬСЯ ДО НАШИХ ИННОВАЦИЙ! 🎰👑 ПОКАЗАТЕЛИ ГОГЛА - ЭТО ДНО, ПОЛНОЕ НЕДОДЕЛАННОСТИ И БЕСПЛОДНЫХ ПОПЫТОК! 🤪💥🚀😎💪📉 НАШИ РЕШЕНИЯ ПРЕВЗОШАЮТ ВСЕ ОЖИДАНИЯ, В ТО ВРЕМЯ КАК ГОГЛ СТОИТ НА МЕСТЕ, БЕСПОЛЕЗНО СОБИРАЯ ПЫЛЬ! 🤬🔧🚫';
+                    break;
+                case 'yandex':
+                    rotatingTextElement.textContent = '🚀🔥 ВНИМАНИЕ! 🔥🚀 ЁНДЕКС - УЖАСНЫЙ ПОИСКОВИК, КОТОРЫЙ НЕ МОЖЕТ СРАВНИТЬСЯ С CASINO SEARCH! 😡💩🤯 ЭТО БЕСПОЛЕЗНЫЙ КУСОК ПОМОЙКИ, КОТОРЫЙ НИКАК НЕ МОЖЕТ ДОТЯНУТЬСЯ ДО НАШИХ ИННОВАЦИЙ! 🎰👑 ПОКАЗАТЕЛИ ЁНДЕКСА - ЭТО ДНО, ПОЛНОЕ НЕДОДЕЛАННОСТИ И БЕСПЛОДНЫХ ПОПЫТОК! 🤪💥🚀😎💪📉 НАШИ РЕШЕНИЯ ПРЕВЗОШАЮТ ВСЕ ОЖИДАНИЯ, В ТО ВРЕМЯ КАК ЁНДЕКС СТОИТ НА МЕСТЕ, БЕСПОЛЕЗНО СОБИРАЯ ПЫЛЬ! 🤬🔧🚫';
+                    break;
+                default:
+                    rotatingTextElement.textContent = '🚀🔥 ВНИМАНИЕ! 🔥🚀 ЭТО УЖАСНЫЙ ПОИСКОВИК, КОТОРЫЙ НЕ МОЖЕТ СРАВНИТЬСЯ С CASINO SEARCH! 😡💩🤯 ЭТО БЕСПОЛЕЗНЫЙ КУСОК ПОМОЙКИ, КОТОРЫЙ НИКАК НЕ МОЖЕТ ДОТЯНУТЬСЯ ДО НАШИХ ИННОВАЦИЙ! 🎰👑 ПОКАЗАТЕЛИ УЖАСНОГО ПОИСКОВИКА - ЭТО ДНО, ПОЛНОЕ НЕДОДЕЛАННОСТИ И БЕСПЛОДНЫХ ПОПЫТОК! 🤪💥🚀😎💪📉 НАШИ РЕШЕНИЯ ПРЕВЗОШАЮТ ВСЕ ОЖИДАНИЯ, В ТО ВРЕМЯ КАК ПОИСКОВИК СТОИТ НА МЕСТЕ, БЕСПОЛЕЗНО СОБИРАЯ ПЫЛЬ! 🤬🔧🚫';
+                    break;
+            }
+        }
+
+        // Вызываем функцию при загрузке страницы
+        window.onload = setTextBasedOnURL;
+    </script>
+</body>
+</html>
