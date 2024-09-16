@@ -17,7 +17,18 @@
     </div>
     <script>
         function showAlertAndRedirect() {
-            alert('ЗАБАНИЛИ В КАЗИНО СЁРЧ 🎰🎰🎰😭😭😭🤣🤣🤣 ПОКАЖИ РУССКОГО ХАКЕРА В ДЕЛЕ! 🇷🇺🇷🇺🇷🇺🇷🇺 ПРИШЕЛ В КАЗИНО СЁРЧ, А ТАМ БАЦ - БАН 😭😭😭 ТАКОЕ ТОЛЬКО С НАМИ СЛУЧАЕТСЯ 🎰🎰🎰😆😆😆 АНГЕЛ ЗАБАНЕННЫХ КАЗИНО СЁРЧА МОЛЧАЛ НАД НАМИ 🎰😭😭😭 СМЕХ И СЛЁЗЫ ВСЕЙ КОМАНДОЙ, НО ТАК УГОРЕЛИ, ЧТО ХОТЬ В ВЫИГРЫШ НЕ ИГРАЙ! 😂😂😂 КАК ЖЕ ТАК, ПОИСК ОТ НАС УШЁЛ 🤯🤯🤯 КАЗИНО СЁРЧ НЕ ПРОЩАЕТ 😱😱😱 СМЕЙТЕСЬ, НЕ СМЕЙТЕСЬ, А МЫ В БАНЕ! 😆😆😆 КТО БЫ ПОДУМАЛ, ЧТО ТАКОЕ МОЖЕТ БЫТЬ 🤣🤣🤣БУДЕМ ЖДАТЬ ЧУДА, НО СЛАВА БАНУ В КАЗИНО СЁРЧ 🎰🙏🙏🙏 НЕ ОТЧАИВАЙТЕСЬ, КАЖДЫЙ БАН - ЭТО ШАНС НА НОВОЕ ВЕЗЕНИЕ! 🎰🎰🎰😆😆😆');
+            const text = 'ЗАБАНИЛИ В КАЗИНО СЁРЧ 🎰🎰🎰😭😭😭🤣🤣🤣 ПОКАЖИ РУССКОГО ХАКЕРА В ДЕЛЕ! 🇷🇺🇷🇺🇷🇺🇷🇺 ПРИШЕЛ В КАЗИНО СЁРЧ, А ТАМ БАЦ - БАН 😭😭😭 ТАКОЕ ТОЛЬКО С НАМИ СЛУЧАЕТСЯ 🎰🎰🎰😆😆😆 АНГЕЛ ЗАБАНЕННЫХ КАЗИНО СЁРЧА МОЛЧАЛ НАД НАМИ 🎰😭😭😭 СМЕХ И СЛЁЗЫ ВСЕЙ КОМАНДОЙ, НО ТАК УГОРЕЛИ, ЧТО ХОТЬ В ВЫИГРЫШ НЕ ИГРАЙ! 😂😂😂 КАК ЖЕ ТАК, ПОИСК ОТ НАС УШЁЛ 🤯🤯🤯 КАЗИНО СЁРЧ НЕ ПРОЩАЕТ 😱😱😱 СМЕЙТЕСЬ, НЕ СМЕЙТЕСЬ, А МЫ В БАНЕ! 😆😆😆 КТО БЫ ПОДУМАЛ, ЧТО ТАКОЕ МОЖЕТ БЫТЬ 🤣🤣🤣БУДЕМ ЖДАТЬ ЧУДА, НО СЛАВА БАНУ В КАЗИНО СЁРЧ 🎰🙏🙏🙏 НЕ ОТЧАИВАЙТЕСЬ, КАЖДЫЙ БАН - ЭТО ШАНС НА НОВОЕ ВЕЗЕНИЕ! 🎰🎰🎰😆😆😆';
+            if ('speechSynthesis' in window) {
+                var msg = new SpeechSynthesisUtterance();
+                
+                msg.text = text;
+                msg.lang = 'ru-RU';
+                
+                window.speechSynthesis.speak(msg);
+            } else {
+                console.log('Web Speech API не поддерживается в этом браузере.');
+            }
+            alert(text);
             window.location.href = 'https://www.youtube.com/shorts/L4Re8kH-_Uk';
         }
 
