@@ -17,14 +17,16 @@
         const params = new URLSearchParams(window.location.search);
         const query = params.get('zaproc');
         const sites = [
+            // Поисковики
             { name: "Google", url: "other.html?site=google" },
             { name: "Yandex", url: "other.html?site=yandex" },
+            { name: "Гугл", url: "other.html?site=google" },
+            { name: "Яндекс", url: "other.html?site=yandex" },
+            // Casino
             { name: "Casino Client", url: "https://sites.google.com/view/casinoclient/" },
             { name: "Casino Kombat", url: "https://sites.google.com/view/casino-kombat/" }, 
             { name: "Casino Discord Server", url: "https://dsc.gg/CasinoClientBoost" },
             { name: "Casino Youtube Channel", url: "https://www.youtube.com/@CasinoClient" },
-            { name: "Гугл", url: "other.html?site=google" },
-            { name: "Яндекс", url: "other.html?site=yandex" },
             { name: "Казино Client", url: "https://sites.google.com/view/casinoclient/" },
             { name: "Казино Kombat", url: "https://sites.google.com/view/casino-kombat/" }, 
             { name: "Казино Discord Сервер", url: "https://dsc.gg/CasinoClientBoost" },
@@ -33,15 +35,34 @@
             { name: "Казино Комбат", url: "https://sites.google.com/view/casino-kombat/" }, 
             { name: "Казино Дискорд Сервер", url: "https://dsc.gg/CasinoClientBoost" },
             { name: "Казино Ютуб Канал", url: "https://www.youtube.com/@CasinoClient" },
-            { name: "Papa Johns", url: "https://papajohns.ru/moscow" },
-            { name: "Papa Джонс", url: "https://papajohns.ru/moscow" },
-            { name: "Папа Johns", url: "https://papajohns.ru/moscow" },
-            { name: "Папа Джонс", url: "https://papajohns.ru/moscow" },
             { name: "Free Premium Casino Client", url: "https://photricity.com/flw/ajax/" },
             { name: "Бесплатный Premium Casino Client", url: "https://photricity.com/flw/ajax/" },
             { name: "Бесплатный премиум Casino Client", url: "https://photricity.com/flw/ajax/" },
             { name: "Бесплатный премиум Казино Client", url: "https://photricity.com/flw/ajax/" },
-            { name: "Бесплатный премиум Казино Клиент", url: "https://photricity.com/flw/ajax/" }
+            { name: "Бесплатный премиум Казино Клиент", url: "https://photricity.com/flw/ajax/" },
+            // Пицца
+            { name: "Papa Johns", url: "https://papajohns.ru/moscow" },
+            { name: "Papa Джонс", url: "https://papajohns.ru/moscow" },
+            { name: "Папа Johns", url: "https://papajohns.ru/moscow" },
+            { name: "Папа Джонс", url: "https://papajohns.ru/moscow" },
+            { name: "Ollis", url: "https://ollis.ru/" },
+            { name: "Олис", url: "https://ollis.ru/" },
+            { name: "Оллис", url: "https://ollis.ru/" },
+            { name: "Алис", url: "https://ollis.ru/" },
+            { name: "Pomodoro", url: "https://pizzapomodoro.pro/" },
+            { name: "Помодоро", url: "https://pizzapomodoro.pro/" },
+            { name: "Помодора", url: "https://pizzapomodoro.pro/" },
+            { name: "Памадора", url: "https://pizzapomodoro.pro/" },
+            // Пасты Casino Client
+            { name: "Nursultan", url: "other.html?site=nursultan" },
+            { name: "Нурсултан", url: "other.html?site=nursultan" },
+            { name: "Nurpukan", url: "other.html?site=nursultan" },
+            { name: "Нурпукан", url: "other.html?site=nursultan" },
+            { name: "Expensive", url: "other.html?site=expensive" },
+            { name: "Экспенсив", url: "other.html?site=expensive" },
+            { name: "Експенсив", url: "other.html?site=expensive" },
+            { name: "Pastpensiv", url: "other.html?site=expensive" },
+            { name: "Пастпенсив", url: "other.html?site=expensive" }
         ];
 
         const resultsDiv = document.getElementById("results");
@@ -61,7 +82,7 @@
             resultsHTML += "</ul>";
             resultsDiv.innerHTML = resultsHTML;
         } else {
-            resultsDiv.innerHTML = "<p>Вы забыли ввести запрос</p>";
+            resultsDiv.innerHTML = "<p>Тебе здесь не рады.</p>";
         }
     </script>
 </body>

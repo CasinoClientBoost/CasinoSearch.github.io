@@ -4,7 +4,7 @@ body {
     margin: 0;
     padding: 0;
     text-align: left;
-    animation: flicker 0.5s infinite alternate;
+    animation: flicker 0.2s infinite alternate, zoom 2s infinite alternate;
 }
 
 @keyframes flicker {
@@ -13,31 +13,27 @@ body {
     100% { background-color: #ff00ff; }
 }
 
+@keyframes zoom {
+    0% { transform: scale(1); }
+    100% { transform: scale(1.1); }
+}
+
 .container {
-    margin-top: 200px;
-    padding: 50px;
-    border: 10px dotted red;
-    background-color: #00ffff;
-    width: 80%;
-    transform: skew(10deg);
-    position: relative;
-    left: 20px;
-    animation: shake 0.3s infinite;
+    margin-top: 300px;
+    padding: 80px;
+    border: 20px dashed orange;
+    background-color: #ff00ff;
+    width: 60%;
+    transform: skew(-15deg);
+    position: absolute;
+    left: 50px;
+    animation: shake 1s infinite infinite linear;
 }
 
 @keyframes shake {
     0% { transform: translate(1px, 1px) rotate(0deg); }
-    25% { transform: translate(-1px, -2px) rotate(-1deg); }
-    50% { transform: translate(-3px, 0px) rotate(1deg); }
-    75% { transform: translate(2px, 1px) rotate(0deg); }
-    100% { transform: translate(1px, -1px) rotate(-1deg); }
-}
-
-.rotating-text {
-    font-size: 80px;
-    color: #0000ff;
-    text-align: center;
-    animation: rotate 3s infinite linear;
+    50% { transform: translate(-5px, -10px) rotate(-5deg); }
+    100% { transform: translate(5px, 10px) rotate(5deg); }
 }
 
 @keyframes rotate {
@@ -45,87 +41,95 @@ body {
     100% { transform: rotate(360deg); }
 }
 
-.bad-input {
-    width: 80%;
-    padding: 30px;
-    margin-bottom: 20px;
-    border: 5px solid red;
-    background-color: yellow;
-    color: green;
-    font-size: 35px;
-    writing-mode: vertical-rl;
+.rotating-text {
+    font-size: 100px;
+    color: #ff0000;
     text-align: center;
-    animation: fade 2s infinite;
+    animation: rotate 5s infinite linear;
+    text-shadow: 3px 3px #000000;
 }
 
-@keyframes fade {
-    0% { opacity: 1; }
-    100% { opacity: 0.3; }
+.bad-input {
+    width: 70%;
+    padding: 40px;
+    margin-bottom: 30px;
+    border: 10px double blue;
+    background-color: lime;
+    color: red;
+    font-size: 40px;
+    writing-mode: horizontal-tb;
+    text-align: left;
+    animation: bounce 3s infinite;
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-30px); }
 }
 
 .terrible-button {
-    padding: 20px;
-    background-color: #ff0000;
-    border: 10px dashed black;
-    cursor: not-allowed;
-    font-size: 45px;
-    transition: background-color 0.2s ease-in-out;
-    animation: growShrink 1s infinite alternate;
-}
-
-@keyframes growShrink {
-    0% { transform: scale(1); }
-    100% { transform: scale(1.3); }
+    padding: 30px;
+    background-color: green;
+    border: 15px dotted pink;
+    cursor: pointer;
+    font-size: 50px;
+    transition: transform 0.3s ease-in-out;
+    animation: bounce 2s infinite alternate;
 }
 
 .fake-buttons {
-    display: flex;
-    justify-content: space-around;
-    margin-top: 50px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin-top: 30px;
 }
 
 .fake-btn {
-    padding: 20px;
-    background-color: pink;
-    border: 5px solid green;
-    font-size: 25px;
-    cursor: pointer;
-    animation: flicker 1s infinite alternate;
+    padding: 30px;
+    background-color: purple;
+    border: 10px solid yellow;
+    font-size: 30px;
+    cursor: not-allowed;
+    animation: flash 0.7s infinite;
 }
 
-.fake-btn:hover {
-    background-color: red;
+@keyframes flash {
+    0% { background-color: pink; }
+    50% { background-color: red; }
+    100% { background-color: pink; }
 }
 
 .blinking-text {
-    font-size: 60px;
-    color: yellow;
-    background-color: blue;
-    animation: blink 0.5s infinite;
+    font-size: 70px;
+    color: black;
+    background-color: orange;
+    animation: blink 1s infinite;
 }
 
 @keyframes blink {
-    0%, 100% { color: blue; background-color: yellow; }
-    50% { color: red; background-color: black; }
+    0%, 100% { color: orange; background-color: black; }
+    50% { color: black; background-color: orange; }
 }
 
 .useless-text {
-    font-size: 40px;
-    color: red;
-    text-align: right;
-    animation: rotate 4s infinite linear;
+    font-size: 50px;
+    color: white;
+    text-align: center;
+    animation: rotate 3s infinite linear;
+    text-shadow: 5px 5px 5px black;
 }
 
 .bad-back {
-    font-size: 50px;
-    background-color: purple;
-    color: white;
-    padding: 20px;
-    text-decoration: none;
-    border: 10px solid green;
+    font-size: 60px;
+    background-color: red;
+    color: yellow;
+    padding: 30px;
+    text-decoration: underline;
+    border: 20px solid blue;
+    text-shadow: 3px 3px 5px black;
 }
 
 .bad-back:hover {
-    color: red;
-    background-color: black;
+    color: black;
+    background-color: white;
 }
