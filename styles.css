@@ -52,12 +52,6 @@ body {
     font-size: 40px;
     writing-mode: horizontal-tb;
     text-align: left;
-    animation: bounce 3s infinite;
-}
-
-@keyframes bounce {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-30px); }
 }
 
 .terrible-button {
@@ -67,7 +61,6 @@ body {
     cursor: pointer;
     font-size: 50px;
     transition: transform 0.3s ease-in-out;
-    animation: bounce 2s infinite alternate;
 }
 
 .fake-buttons {
