@@ -18,7 +18,6 @@ body {
     border: 20px dashed orange;
     background-color: #ff00ff;
     width: 60%;
-    transform: skew(-15deg);
     position: absolute;
     left: 50px;
 }
